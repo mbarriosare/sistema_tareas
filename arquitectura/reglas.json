@@ -1,0 +1,16 @@
+[
+  {
+    "id": "R1",
+    "adr": "ADR-001",
+    "modulo": "tasks",
+    "no_puede_importar": ["ui"],
+    "porque": "Un error al gestionar una tarea no debe afectar las demás tareas del sistema."
+  },
+  {
+    "id": "R2",
+    "adr": "ADR-002",
+    "modulo": "ui",
+    "no_puede_importar": ["tasks"],
+    "porque": "La interfaz debe seguir funcionando aunque una tarea individual tenga un problema."
+  }
+]

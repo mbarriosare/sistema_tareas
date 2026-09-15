@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sistema de Tareas</title>
+
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background: #f4f6f8;
+            color: #222;
+        }
+
+        header {
+            background: #1f2937;
+            color: white;
+            padding: 20px;
+            text-align: center;
+        }
+
+        main {
+            width: 90%;
+            max-width: 800px;
+            margin: 30px auto;
+        }
+
+        .task-form {
+            display: flex;
+            gap: 10px;
+            margin-bottom: 20px;
+        }
+
+        .task-form input {
+            flex: 1;
+            padding: 12px;
+            border: 1px solid #ccc;
+            border-radius: 6px;
+        }
+
+        button {
+            padding: 10px 15px;
+            border: none;
+            border-radius: 6px;
+            cursor: pointer;
+        }
+
+        .add-button {
+            background: #2563eb;
+            color: white;
+        }
+
+        .delete-button {
+            background: #dc2626;
+            color: white;
+        }
+
+        .complete-button {
+            background: #16a34a;
+            color: white;
+        }
+
+        #task-list {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+        }
+
+        .task {
+            background: white;
+            padding: 15px;
+            border-radius: 8px;
+            border: 1px solid #ddd;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 15px;
+        }
+
+        .task-info {
+            flex: 1;
+        }
+
+        .task-title {
+            margin: 0;
+            font-size: 18px;
+        }
+
+        .task-completed {
+            text-decoration: line-through;
+            color: #777;
+        }
+
+        .task-actions {
+            display: flex;
+            gap: 8px;
+        }
+
+        .empty-message {
+            text-align: center;
+            color: #777;
+            padding: 30px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <header>
+        <h1>Sistema de Tareas</h1>
+    </header>
+
+    <main>
+        <form id="task-form" class="task-form">
+            <input
+                type="text"
+                id="task-input"
+                placeholder="Escribe una tarea..."
+                autocomplete="off"
+            >
+
+            <button type="submit" class="add-button">
+                Agregar
+            </button>
+        </form>
+
+        <section id="task-list"></section>
+    </main>
+
+    <script type="module" src="./src/app.js"></script>
+
+</body>
+</html>
