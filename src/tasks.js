@@ -1,4 +1,4 @@
-
+import { renderTasks } from "./ui.js";
 let tasks = [];
 
 let nextId = 1;
